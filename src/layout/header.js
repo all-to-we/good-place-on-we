@@ -9,6 +9,12 @@ const LayoutHeaderContainer = ({toggle}) => {
       <div className="header-menu" onClick={toggle}>
         <i className="fas fa-bars"></i>
       </div>
+      <div className="header-logo">
+        Good place to We
+      </div>
+      <div className="header-user-profile">
+        <i className="fas fa-user-circle"></i>
+      </div>
     </div>
   )
 };

@@ -3,7 +3,8 @@ $height: 50px;
 $lineHeight: 30px;
 $lineFontSize: 30px;
 $fontColor: #f7f7f7;
-$bottomColor: #6d7988;
+$topBgColor: #1662bc;
+$bottomBgColor: #6d7988;
 
 .app {
   width: 100%;
@@ -27,7 +28,7 @@ $bottomColor: #6d7988;
   }
   &-header{
     top: 0;
-    background-color: #1662bc;
+    background-color: $topBgColor;
     color: #fff;
     &--body {
       display: flex;
@@ -53,10 +54,16 @@ $bottomColor: #6d7988;
 
 .header{
   display: flex;
-  &-menu {
+  justify-content: space-between;
+  &-menu,
+  &-logo,
+  &-user-profile {
     font-size: $lineFontSize;
     line-height: $height;
     padding: 0 10px;
+  }
+  &-logo {
+    font-size: 20px;
   }
 }
 
@@ -73,7 +80,7 @@ $bottomColor: #6d7988;
     list-style: none;
     flex: 1 1 auto;
     margin: 0 1px;
-    background-color: $bottomColor;
+    background-color: $bottomBgColor;
   }
 }
 
@@ -103,6 +110,6 @@ $bottomColor: #6d7988;
     text-align: center;
     color: $fontColor;
     font-size: $lineFontSize;
-    background-color: $bottomColor;
+    background-color: $topBgColor;
   }
 }
