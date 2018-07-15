@@ -2,15 +2,17 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from 'prop-types';
 
-class RouteIndexContainer extends Component {
+class RouteMainContainer extends Component {
   constructor(props) {
     super(props);
   }
   render() {
     return (
-      <div>index</div>
+      <div>
+        Main
+      </div>
     );
   }
 }
-const RouteIndex = connect()(RouteIndexContainer);
-export default RouteIndex;
+const RouteMain = connect()(RouteMainContainer);
+export default RouteMain;

@@ -1,7 +1,7 @@
 $height: 50px;
 $lineHeight: 30px;
 
-.root {
+.app {
   width: 100%;
   max-width: 800px;
   margin: auto;
@@ -14,12 +14,12 @@ $lineHeight: 30px;
   }
   &-header,
   &-footer {
+    left: 0;
     height: $height;
     position: fixed;
   }
   &-header{
     top: 0;
-    left: 0;
     background-color: #1662bc;
     color: #fff;
     &--body {
@@ -34,13 +34,21 @@ $lineHeight: 30px;
     }
   }
   &-body{
-    //padding: 55px 5px;
-    padding: 5px 5px 5px 5px;
+    padding: 55px 5px;
+    //padding: 5px 5px 5px 5px;
   }
   &-footer{
     background-color: #ccc;
     padding: 5px;
     text-align: center;
     bottom: 0;
+  }
+}
+
+.footer {
+  display: flex;
+  .footer-item {
+    list-style: none;
+    flex: 1 1 auto;
   }
 }

@@ -1,7 +1,6 @@
 const AuthConstants = {
-  SIGN_IN_AUTH: "SIGN_IN_AUTH",
-  SIGN_OUT_AUTH: "SIGN_OUT_AUTH",
-  TOGGLE_AUTH: "TOGGLE_AUTH",
-}
+  AUTH_SUCCESS: "AUTH_SUCCESS",
+  AUTH_FAIL: "AUTH_FAIL",
+};
 
-export default AuthConstants
+export default AuthConstants;

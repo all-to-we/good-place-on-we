@@ -1,32 +1,19 @@
-import AuthConstants from "./AuthConstants";
+import AuthConstants from "./auth.constants";
 
-const AuthReducer = (state = {login: false, name: null, show: false}, action) => {
+const AuthReducer = (state = {isAuthenticated: false}, action) => {
   switch (action.type) {
-    case AuthConstants.SIGN_IN_AUTH:
+    case AuthConstants.AUTH_SUCCESS:
       return {
-        login: true,
-        name: action.name,
-        show: false
+        ...state,
+        isAuthenticated: true
       };
-    case AuthConstants.SIGN_OUT_AUTH:
+    case AuthConstants.AUTH_FAIL:
       return {
-        login: false,
-        name: null,
-        show: false
-      };
-    case AuthConstants.TOGGLE_AUTH:
-      return {
-        login: state.login,
-        name: state.name,
-        show: action.show
+        ...state,
+        isAuthenticated: false
       };
     default:
       return state;
-      //   return {
-      //   login: true,
-      //   name: 'name',
-      //   show: false
-      // };
   }
 }
 

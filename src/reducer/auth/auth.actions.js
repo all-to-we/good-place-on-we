@@ -1,12 +1,11 @@
-import AuthConstants from "./AuthConstants";
+import AuthConstants from "./auth.constants";
 
-export const signInUser = (name) => ({
-  type: AuthConstants.SIGN_IN_AUTH,
-  name
+export const authSuccess = () => ({
+  type: AuthConstants.AUTH_SUCCESS
 });
 
-export const signOutUser = () => ({
-  type: AuthConstants.SIGN_OUT_AUTH,
+export const authFail = () => ({
+  type: AuthConstants.AUTH_FAIL
 });
 
 export const toggleUser = (show) => ({
