@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router';
 import appCss from './style.scss'
 import LayoutHeader from "./layout/header";
 import LayoutFooter from "./layout/footer";
+import LayoutSidebar from "./layout/sidebar";
 
 import RouteNotFound from "./router/notFound";
 import SubRoutes from "./router/subRouter";
@@ -21,6 +22,7 @@ class App extends Component {
         <header className="app-header">
           <LayoutHeader />
         </header>
+        <LayoutSidebar/>
         <div className="app-body">
           <div>
             <Switch>

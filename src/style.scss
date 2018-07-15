@@ -1,22 +1,29 @@
+$width: 800px;
 $height: 50px;
 $lineHeight: 30px;
+$lineFontSize: 30px;
+$fontColor: #f7f7f7;
+$bottomColor: #6d7988;
 
 .app {
   width: 100%;
-  max-width: 800px;
+  max-width: $width;
   margin: auto;
   box-sizing: border-box;
   &-header,
   &-body,
-  &-footer {
+  &-footer{
     width: 100%;
     box-sizing: border-box;
   }
   &-header,
   &-footer {
     left: 0;
-    height: $height;
     position: fixed;
+  }
+  &-header,
+  &-footer {
+    height: $height;
   }
   &-header{
     top: 0;
@@ -24,7 +31,7 @@ $lineHeight: 30px;
     color: #fff;
     &--body {
       display: flex;
-      max-width: 800px;
+      max-width: $width;
       margin: auto;
       justify-content: space-between;
     }
@@ -39,16 +46,63 @@ $lineHeight: 30px;
   }
   &-footer{
     background-color: #ccc;
-    padding: 5px;
     text-align: center;
     bottom: 0;
   }
 }
 
+.header{
+  display: flex;
+  &-menu {
+    font-size: $lineFontSize;
+    line-height: $height;
+    padding: 0 10px;
+  }
+}
+
 .footer {
   display: flex;
-  .footer-item {
+  font-size: $lineFontSize;
+  line-height: $height;
+  a {
+    width: 100%;
+    display: block;
+    color: $fontColor;
+  }
+  &-item {
     list-style: none;
     flex: 1 1 auto;
+    margin: 0 1px;
+    background-color: $bottomColor;
+  }
+}
+
+.sidebar{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+  position: fixed;
+  &.active{
+    display: flex;
+  }
+  &-wrapper {
+    flex: 7 1 auto;
+    height: 100%;
+    max-width: 400px;
+    background-color: #f7f7f7;
+  }
+  &-dim {
+    flex: 3 1 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  &-header{
+    padding: 10px;
+    text-align: center;
+    color: $fontColor;
+    font-size: $lineFontSize;
+    background-color: $bottomColor;
   }
 }

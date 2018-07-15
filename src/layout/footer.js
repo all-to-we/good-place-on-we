@@ -8,7 +8,7 @@ const LayoutFooter = ({routes}) => {
       {routes ? routes.map(
         (route, i) => (
           <li className="footer-item" key={i}>
-            <Link to={route.path}>{route.name}</Link>
+            <Link to={route.path}><i className={'fas fa-' + route.icon} /></Link>
           </li>
           )
         ) : ''}
