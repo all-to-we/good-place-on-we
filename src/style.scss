@@ -1,0 +1,46 @@
+$height: 50px;
+$lineHeight: 30px;
+
+.root {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  box-sizing: border-box;
+  &-header,
+  &-body,
+  &-footer {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  &-header,
+  &-footer {
+    height: $height;
+    position: fixed;
+  }
+  &-header{
+    top: 0;
+    left: 0;
+    background-color: #1662bc;
+    color: #fff;
+    &--body {
+      display: flex;
+      max-width: 800px;
+      margin: auto;
+      justify-content: space-between;
+    }
+    &--logo {
+      padding: 10px;
+      line-height: $lineHeight;
+    }
+  }
+  &-body{
+    //padding: 55px 5px;
+    padding: 5px 5px 5px 5px;
+  }
+  &-footer{
+    background-color: #ccc;
+    padding: 5px;
+    text-align: center;
+    bottom: 0;
+  }
+}
